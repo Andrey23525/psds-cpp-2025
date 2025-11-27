@@ -14,5 +14,8 @@ enum class CheckFlags : uint8_t {
 };
 
 void PrintCheckFlags(CheckFlags flags) {
-    throw std::runtime_error{"Not implemented"};
+    using std::cout;
+    if((uint8_t)flags == 0) {
+      cout << "[]";
+    }
 }
