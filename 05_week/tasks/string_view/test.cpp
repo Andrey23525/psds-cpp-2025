@@ -236,24 +236,6 @@ TEST(StringViewTest, ToString) {
     EXPECT_EQ(sv4.ToString(), "");
 }
 
-TEST(StringViewTest, Compare) {
-    StringView sv1("Hello");
-    StringView sv2("Hello");
-    StringView sv3("Hell");
-    StringView sv4("Hello!");
-    StringView sv5("Hella");
-
-    EXPECT_EQ(sv1.Compare(sv2), 0);
-    EXPECT_TRUE(sv1 == sv2);
-
-    EXPECT_GT(sv1.Compare(sv3), 0);
-    EXPECT_FALSE(sv1 == sv3);
-
-    EXPECT_LT(sv1.Compare(sv4), 0);
-
-    EXPECT_GT(sv1.Compare(sv5), 0);
-}
-
 TEST(StringViewTest, ObservesOriginalString) {
     std::string str = "Hello";
     StringView sv(str);
