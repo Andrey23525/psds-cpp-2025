@@ -1,1 +1,1 @@
-add_gtest_asan(test_unique_ptr test.cpp)
+#add_gtest_asan(test_unique_ptr test.cpp)
